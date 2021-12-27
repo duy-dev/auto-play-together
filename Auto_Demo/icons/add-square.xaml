@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ControlTemplate x:Key="addsquaresvg">
+    <Viewbox Stretch="Uniform">
+      <Canvas Height="24" Width="24">
+        <Path Data="M8 12H16" Stroke="#FFFFFF" StrokeThickness="1.5" StrokeStartLineCap="round" StrokeEndLineCap="round" StrokeLineJoin="round" Fill="#00000000" />
+                <Path Data="M12 16V8" Stroke="#FFFFFF" StrokeThickness="1.5" StrokeStartLineCap="round" StrokeEndLineCap="round" StrokeLineJoin="round" Fill="#00000000" />
+                <Path Data="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" Stroke="#FFFFFF" StrokeThickness="1.5" StrokeStartLineCap="round" StrokeEndLineCap="round" StrokeLineJoin="round" Fill="#00000000" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+</ResourceDictionary>

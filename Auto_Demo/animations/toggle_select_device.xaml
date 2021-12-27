@@ -1,0 +1,80 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Storyboard x:Key="lb_device_down">
+        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+        </ObjectAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle">
+            <EasingDoubleKeyFrame KeyTime="0" Value="6"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="20"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="45"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="85"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="140"/>
+        </DoubleAnimationUsingKeyFrames>
+        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lb_ListDevice">
+            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.15" Value="{x:Static Visibility.Visible}"/>
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+        </ObjectAnimationUsingKeyFrames>
+        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lb_ButonOpen">
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.05" Value="{x:Static Visibility.Hidden}"/>
+        </ObjectAnimationUsingKeyFrames>
+        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lb_ButtonClose">
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.05" Value="{x:Static Visibility.Visible}"/>
+        </ObjectAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="lb_ListDevice">
+            <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="14"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="39"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="79"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="134"/>
+        </DoubleAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lb_ListDevice">
+            <EasingDoubleKeyFrame KeyTime="0" Value="0.3"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="0.5"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.7"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="1"/>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Key="lb_device_up">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle">
+            <EasingDoubleKeyFrame KeyTime="0" Value="85"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="45"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="25"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="5"/>
+        </DoubleAnimationUsingKeyFrames>
+        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lb_ListDevice">
+            <DiscreteObjectKeyFrame KeyTime="0">
+                <DiscreteObjectKeyFrame.Value>
+                    <Visibility>Visible</Visibility>
+                </DiscreteObjectKeyFrame.Value>
+            </DiscreteObjectKeyFrame>
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.05" Value="{x:Static Visibility.Visible}"/>
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Hidden}"/>
+        </ObjectAnimationUsingKeyFrames>
+        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.15" Value="{x:Static Visibility.Visible}"/>
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Hidden}"/>
+        </ObjectAnimationUsingKeyFrames>
+        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lb_ButonOpen">
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.05" Value="{x:Static Visibility.Visible}"/>
+        </ObjectAnimationUsingKeyFrames>
+        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lb_ButtonClose">
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.05" Value="{x:Static Visibility.Hidden}"/>
+        </ObjectAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lb_ListDevice">
+            <EasingDoubleKeyFrame KeyTime="0" Value="0.7"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="0.5"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.4"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="1"/>
+        </DoubleAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="lb_ListDevice">
+            <EasingDoubleKeyFrame KeyTime="0" Value="79"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="39"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="19"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="5"/>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+</ResourceDictionary>

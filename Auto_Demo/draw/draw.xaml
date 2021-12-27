@@ -1,0 +1,13 @@
+﻿<Window x:Class="Auto_Demo.test.draw"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Auto_Demo.test"
+        mc:Ignorable="d" x:Name="win_Draw"
+        Title="draw" Height="300" Width="300" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
+
+    <Grid>
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="drawLine" BorderBrush="#FFEA0F0F" Height="100" Width="100" BorderThickness="1"></Border>
+    </Grid>
+</Window>

@@ -1,0 +1,10 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ControlTemplate x:Key="tickcirclesvg">
+    <Viewbox Stretch="Uniform">
+      <Canvas Height="24" Width="24">
+                <Path Data="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" Stroke="#10B981" StrokeThickness="1.5" StrokeStartLineCap="round" StrokeEndLineCap="round" StrokeLineJoin="round" Fill="#00000000" />
+                <Path Data="M7.75 12L10.58 14.83L16.25 9.17004" Stroke="#10B981" StrokeThickness="1.5" StrokeStartLineCap="round" StrokeEndLineCap="round" StrokeLineJoin="round" Fill="#00000000" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+</ResourceDictionary>

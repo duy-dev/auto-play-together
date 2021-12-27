@@ -1,0 +1,9 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ControlTemplate x:Key="chevrondownlinearsvg">
+    <Viewbox Stretch="Uniform">
+      <Canvas Height="24" Width="24">
+                <Path Data="M19.9201 8.94995L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.94995" Stroke="#FF7D7D85" StrokeThickness="1.5" StrokeStartLineCap="round" StrokeEndLineCap="round" StrokeLineJoin="round" Fill="#00000000" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+</ResourceDictionary>

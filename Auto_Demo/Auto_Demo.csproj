@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6999F50F-32DA-4C6C-B116-7513876061FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Auto_Demo</RootNamespace>
+    <AssemblyName>Auto_Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="KAutoHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dll\KAutoHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="presentationframework.aero2" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Tesseract, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tesseract.4.1.1\lib\net45\Tesseract.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="components\CMessageBox.xaml.cs">
+      <DependentUpon>CMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="components\notification.xaml.cs">
+      <DependentUpon>notification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="components\test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="draw\rounded.xaml.cs">
+      <DependentUpon>rounded.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="draw\size_fish.xaml.cs">
+      <DependentUpon>size_fish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="draw_window\FishSizeBorder.xaml.cs">
+      <DependentUpon>FishSizeBorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="draw_window\RoundBorder.xaml.cs">
+      <DependentUpon>RoundBorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="draw_window\SquareBorder.xaml.cs">
+      <DependentUpon>SquareBorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="services\Auto.cs" />
+    <Compile Include="services\car.cs" />
+    <Compile Include="services\config\common.cs" />
+    <Compile Include="services\config\ConfigAuto.cs" />
+    <Compile Include="services\config\ConfigFishSize.cs" />
+    <Compile Include="services\config\EnumAuto.cs" />
+    <Compile Include="services\config\FishingRod.cs" />
+    <Compile Include="services\config\FishSize.cs" />
+    <Compile Include="services\database.cs" />
+    <Compile Include="services\emulator.cs" />
+    <Compile Include="services\ml\Fish.cs" />
+    <Compile Include="services\ml\ImageToText.cs" />
+    <Compile Include="services\MyMessageBox.cs" />
+    <Compile Include="services\notification.cs" />
+    <Compile Include="draw\draw.xaml.cs">
+      <DependentUpon>draw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="draw\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="animations\toggle_select_device.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="components\CMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="components\notification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="components\test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\button_viewbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\checkbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\scroll_combobox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\scroll_null.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="custom\scrollbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\select.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="custom\slider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="draw\rounded.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="draw\size_fish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="draw_window\FishSizeBorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="draw_window\RoundBorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="draw_window\SquareBorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="icons\add-square.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\chevron-down.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\chevron-up.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\edit-name.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\icon_add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\noti-error.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\noti-info.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\noti-success.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\noti-warning.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\pause-auto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\play-auto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="icons\save-name.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="popups\add_device.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="draw\draw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="draw\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="popups\add_device.xaml.cs">
+      <DependentUpon>add_device.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="tessdata\number.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\memu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bluestacks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\nox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ldplayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\android.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AutoItX3Lib">
+      <Guid>{F8937E53-D444-4E71-9275-35B64210CC3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fishing-rod\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\icon_crown_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\icon_money_1.png" />
+    <Resource Include="images\icon\icon_recycle_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\fishing-float.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\broken-link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\buoy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\recycle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\broken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\summary\rod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish\11.png" />
+    <Resource Include="images\fish\12.png" />
+    <Resource Include="images\fish\13.png" />
+    <Resource Include="images\fish\15.png" />
+    <Resource Include="images\fish\16.png" />
+    <Resource Include="images\fish\17.png" />
+    <Resource Include="images\fish\18.png" />
+    <Resource Include="images\fish\19.png" />
+    <Resource Include="images\fish\20.png" />
+    <Resource Include="images\fish\21.png" />
+    <Resource Include="images\fish\23.png" />
+    <Resource Include="images\fish\24.png" />
+    <Resource Include="images\fish\25.png" />
+    <Resource Include="images\fish\26.png" />
+    <Resource Include="images\fish\27.png" />
+    <Resource Include="images\fish\28.png" />
+    <Resource Include="images\fish\29.png" />
+    <Resource Include="images\fish\30.png" />
+    <Resource Include="images\fish\31.png" />
+    <Resource Include="images\fish\32.png" />
+    <Resource Include="images\fish\33.png" />
+    <Resource Include="images\fish\34.png" />
+    <Resource Include="images\fish\36.png" />
+    <Resource Include="images\fish\37.png" />
+    <Resource Include="images\fish\38.png" />
+    <Resource Include="images\fish\39.png" />
+    <Resource Include="images\fish\40.png" />
+    <Resource Include="images\fish\43.png" />
+    <Resource Include="images\fish\44.png" />
+    <Resource Include="images\fish\45.png" />
+    <Resource Include="images\fish\46.png" />
+    <Resource Include="images\fish\47.png" />
+    <Resource Include="images\fish\48.png" />
+    <Resource Include="images\fish\49.png" />
+    <Resource Include="images\fish\50.png" />
+    <Resource Include="images\fish\501.png" />
+    <Resource Include="images\fish\502.png" />
+    <Resource Include="images\fish\503.png" />
+    <Resource Include="images\fish\51.png" />
+    <Resource Include="images\fish\52.png" />
+    <Resource Include="images\fish\53.png" />
+    <Resource Include="images\fish\54.png" />
+    <Resource Include="images\fish\55.png" />
+    <Resource Include="images\fish\56.png" />
+    <Resource Include="images\fish\57.png" />
+    <Resource Include="images\fish\58.png" />
+    <Resource Include="images\fish\59.png" />
+    <Resource Include="images\fish\60.png" />
+    <Resource Include="images\fish\61.png" />
+    <Resource Include="images\fish\62.png" />
+    <Resource Include="images\fish\63.png" />
+    <Resource Include="images\fish\64.png" />
+    <Resource Include="images\fish\65.png" />
+    <Resource Include="images\fish\66.png" />
+    <Resource Include="images\fish\67.png" />
+    <Resource Include="images\fish\68.png" />
+    <Resource Include="images\fish\69.png" />
+    <Resource Include="images\fish\70.png" />
+    <Resource Include="images\fish\71.png" />
+    <Resource Include="images\fish\72.png" />
+    <Resource Include="images\fish\73.png" />
+    <Resource Include="images\fish\74.png" />
+    <Resource Include="images\fish\75.png" />
+    <Resource Include="images\fish\76.png" />
+    <Resource Include="images\fish\77.png" />
+    <Resource Include="images\fish\78.png" />
+    <Resource Include="images\fish\79.png" />
+    <Resource Include="images\fish\80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish\1.png" />
+    <Resource Include="images\fish\10.png" />
+    <Resource Include="images\fish\2.png" />
+    <Resource Include="images\fish\3.png" />
+    <Resource Include="images\fish\4.png" />
+    <Resource Include="images\fish\5.png" />
+    <Resource Include="images\fish\6.png" />
+    <Resource Include="images\fish\7.png" />
+    <Resource Include="images\fish\8.png" />
+    <Resource Include="images\fish\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish\35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish\41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish\42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\sort_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\sort_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="text\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\get-location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\get-location-ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\get-location-error.png" />
+    <Resource Include="images\icon\get-location-success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Tesseract.4.1.1\build\Tesseract.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tesseract.4.1.1\build\Tesseract.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Import Project="..\packages\Tesseract.4.1.1\build\Tesseract.targets" Condition="Exists('..\packages\Tesseract.4.1.1\build\Tesseract.targets')" />
+</Project>
